@@ -1,0 +1,133 @@
+﻿@import url('Site.css');
+
+body {
+    width: 100vw;
+    height: 90vh;
+    padding-top: 0;
+    padding-bottom: 5vh;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Home/Index styles*/
+
+#Home_Index_Background img {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: no-repeat;
+    z-index: -1;
+}
+
+
+
+#Color_Overlay {
+    position: relative;
+    bottom: 100vh;
+    right: 0;
+    background-size: cover;
+    background: rgba(128,128,128,0.45);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+
+
+.jumbotron {
+    position: relative;
+    color: white;
+    background-size: cover;
+    background-color: rgba(128,128,128,0.45);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 1vh;
+    padding-left: 7vw;
+    padding-bottom: 0;
+}
+
+
+
+    .jumbotron h1 {
+        padding-top: 2rem;
+        font-size: 4.5em;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 100;
+        color: white;
+    }
+
+    .jumbotron h2 {
+        font-size: 2.5em;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    .jumbotron span {
+        font-size: 1.25em;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .jumbotron p {
+        margin-bottom: 0;
+        font-family:"Josefin Sans", sans-serif;
+        font-size:2em;
+        font-weight:200;
+    }
+
+#Free_Quote_Button {
+    position: relative;
+    bottom: 100vh;
+    left: 10vw;
+}
+
+#Free a {
+    position: relative;
+    display: block;
+    bottom: 100vh;
+}
+
+/*styling for Create Page of insuree controller*/
+#Create_CSHTML_Image {
+    position: relative;
+    background-image: url("Images/widesmartRoad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0vh;
+    left: -10vh;
+    width: 100vw;
+    height: 150vh;
+}
+
+#Create_Cshtml_Color_Overlay {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background: rgba(255,255,255,.35);
+    width: 100vw;
+    height: 150vh;
+    z-index: 1;
+}
