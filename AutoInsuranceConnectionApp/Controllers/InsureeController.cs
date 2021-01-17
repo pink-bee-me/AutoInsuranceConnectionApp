@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using AutoInsuranceConnectionApp.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using AutoInsuranceConnectionApp.Models;
 
 namespace AutoInsuranceConnectionApp.Controllers
 {
     public class InsureeController : Controller
     {
-        private InsuranceEntities db = new InsuranceEntities();
+        private InsuranceEntitiesQuotes db = new InsuranceEntitiesQuotes();
 
         // GET: Insuree
         public ActionResult Index()
@@ -48,14 +44,19 @@ namespace AutoInsuranceConnectionApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,Quote")] Insuree insuree)
         {
-            if (ModelState.IsValid)
-            {
-                db.Insurees.Add(insuree);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            using (InsuranceEntitiesQuotes Insuree = new InsuranceEntitiesQuotes())
 
-            return View(insuree);
+
+                if (ModelState.IsValid)
+                {
+                    db.Insurees.Add(insuree);
+                    db.SaveChanges();
+                    int id = insuree.Id;
+                    return RedirectToAction("CalculateQuote", "Quote");
+
+                }
+
+            return View();
         }
 
         // GET: Insuree/Edit/5
@@ -122,6 +123,20 @@ namespace AutoInsuranceConnectionApp.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult InsureeDataToQuoteCalculator(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Insuree insuree = db.Insurees.Find(id);
+            if (insuree == null)
+            {
+                return HttpNotFound();
+            }
+            return View("QuoteCalculator", "Quote");
         }
     }
 }

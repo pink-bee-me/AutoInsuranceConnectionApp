@@ -9,18 +9,22 @@ namespace AutoInsuranceConnectionApp.Controllers
 {
     public class QuoteController : Controller
     {
+        private InsuranceEntitiesQuotes db = new InsuranceEntitiesQuotes();  
+
         // GET: Quote
-        public ActionResult GetInsureeData()
+        public ActionResult GetInsureeData(int id)
         {
-            Insuree quoteData = new Insuree();
-            return View(quoteData);
+            var data = db.Insurees
+            return View(data);
         }
 
 
-      //  public ActionResult CalculateQuote()
-      //  {
+      public ActionResult QuoteCalculator(Insuree Insuree)
+        {
+            var quote = new Quote();
 
-      //  }
+
+       }
 
     }
 }
