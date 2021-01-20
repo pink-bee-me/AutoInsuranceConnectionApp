@@ -2,7 +2,7 @@
 
 body {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     padding-top: 0;
     padding-bottom: 5vh;
 }
@@ -65,14 +65,14 @@ textarea {
     height: 100vh;
     padding-top: 1vh;
     padding-left: 7vw;
-    padding-bottom: 0;
+    padding-bottom: 5vh;
 }
 
 
 
     .jumbotron h1 {
-        padding-top: 2rem;
-        font-size: 4.5em;
+        padding-top: 1.5rem;
+        font-size: 4.0em;
         font-family: "Josefin Sans", sans-serif;
         font-weight: 100;
         color: white;
@@ -116,8 +116,8 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     top: 0vh;
-    left: -10vh;
-    width: 100vw;
+    left: 0vw;
+    width: 100%;
     height: 150vh;
 }
 
@@ -127,6 +127,33 @@ textarea {
     right: 0;
     background-size: cover;
     background: rgba(255,255,255,.35);
+    width: 100vw;
+    height: 150vh;
+    z-index: 1;
+}
+
+#Create_Body {
+    font-size: 2em;
+}
+ 
+/*Admin.cshtml styles*/
+#Admin_cshtml_Image {
+    position: relative;
+    background-image: url("Images/MonopolyCar.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0vh;
+    left: -10vh;
+    width: 100vw;
+    height: 150vh;
+}
+
+#Admim_cshtml_Color_Overlay {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background: rgba(125,125,125,0.45);
     width: 100vw;
     height: 150vh;
     z-index: 1;

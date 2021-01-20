@@ -9,62 +9,22 @@
 
 namespace AutoInsuranceConnectionApp.Models
 {
+    using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Insuree
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Insuree()
-        {
-            this.Quotes = new HashSet<Quote>();
-        }
-
         public int Id { get; set; }
-
-        [Display(Name = "First Name")]
-        [Required(ErrorMessage = "Please Enter Your First Name.")]
         public string FirstName { get; set; }
-
-
-
-        [Display(Name = "Last Name")]
-        [Required(ErrorMessage = "Please Enter Your Last Name.")]
         public string LastName { get; set; }
-
-
-        [Display(Name = "Email Address")]
-        [Required(ErrorMessage = "Please Enter Your Email Address.")]
         public string EmailAddress { get; set; }
-
-        [Display(Name = "Date Of Birth")]
-        [Required(ErrorMessage = "Please Enter Your Date Of Birth.")]
         public System.DateTime DateOfBirth { get; set; }
-
-        [Display(Name = "Auto Year")]
-        [Required(ErrorMessage = "Please Enter The Year Your Automobile Was Manufactured.")]
         public int CarYear { get; set; }
-
-        [Display(Name = "Auto Make")]
-        [Required(ErrorMessage = "Please Enter The Make Of Your Automobile.")]
         public string CarMake { get; set; }
-
-        [Display(Name = "Auto Model")]
-        [Required(ErrorMessage = "Please Enter The Model Of Your Automobile.")]
         public string CarModel { get; set; }
-
-
         public bool DUI { get; set; }
-
-        [Display(Name = "Speeding Tickets")]
-        [Required(ErrorMessage = "Please Enter The Number Of Speeding Tickets. (if None then Enter[0])")]
         public int SpeedingTickets { get; set; }
-
         public bool CoverageType { get; set; }
-
         public decimal Quote { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Quote> Quotes { get; set; }
     }
 }

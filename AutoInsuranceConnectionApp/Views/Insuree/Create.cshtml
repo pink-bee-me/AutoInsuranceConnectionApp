@@ -1,17 +1,15 @@
-﻿@model AutoInsuranceConnectionApp.Models.Insuree
-
+﻿@using AutoInsuranceConnectionApp.Models
 
 
 <div id="Create_CSHTML_Image">
 
   <div id="Create_Cshtml_Color_Overlay">
 
-      <div class="jumbotron">
+      <div id="Create_Body" class="jumbotron">
 
         @using (Html.BeginForm())
         {
           @Html.AntiForgeryToken()
-
 
 
 
@@ -43,7 +41,7 @@
               @Html.LabelFor(model => model.EmailAddress, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
               <div class="col-md-10">
                 @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })Example: bobmarley@yahoo.com-
+                @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
               </div>
             </div>
 
@@ -61,7 +59,7 @@
               @Html.LabelFor(model => model.CarYear, htmlAttributes: new { @class = "control-label col-sm-2 font-weight-bold" })
               <div class="col-sm-10">
                 @Html.EditorFor(model => model.CarYear, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CarYear, "", new { @class = "text-danger" })Example: 2014
+                @Html.ValidationMessageFor(model => model.CarYear, "", new { @class = "text-danger" })
               </div>
             </div>
 
@@ -69,7 +67,7 @@
               @Html.LabelFor(model => model.CarMake, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
               <div class="col-md-10">
                 @Html.EditorFor(model => model.CarMake, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CarMake, "", new { @class = "text-danger" })Example: Ford
+                @Html.ValidationMessageFor(model => model.CarMake, "", new { @class = "text-danger" })
               </div>
             </div>
 
@@ -77,7 +75,7 @@
               @Html.LabelFor(model => model.CarModel, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
               <div class="col-md-10">
                 @Html.EditorFor(model => model.CarModel, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CarModel, "", new { @class = "text-danger" })Example: F150 Step-side
+                @Html.ValidationMessageFor(model => model.CarModel, "", new { @class = "text-danger" })
               </div>
             </div>
 
@@ -86,7 +84,8 @@
               <div class="col-md-10">
                 <div class="checkbox">
                   @Html.EditorFor(model => model.DUI)
-                  @Html.ValidationMessageFor(model => model.DUI, "", new { @class = "text-danger" })Check Box If Ever Had A DUI
+                  @Html.ValidationMessageFor(model => model.DUI, "", new { @class = "text-danger" })
+                  Check Box To Indicate DUI On Driving Record
                 </div>
               </div>
             </div>
@@ -95,7 +94,7 @@
               @Html.LabelFor(model => model.SpeedingTickets, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
               <div class="col-md-10">
                 @Html.EditorFor(model => model.SpeedingTickets, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SpeedingTickets, "", new { @class = "text-danger" }) Enter Number of Speeding Tickets
+                @Html.ValidationMessageFor(model => model.SpeedingTickets, "", new { @class = "text-danger" }) Enter Number (Include ALL Speeding Tickets)
               </div>
             </div>
 
@@ -104,7 +103,7 @@
               <div class="col-md-10">
                 <div class="checkbox">
                   @Html.EditorFor(model => model.CoverageType)
-                  @Html.ValidationMessageFor(model => model.CoverageType, "", new { @class = "text-danger" })Check Box if Full Coverage
+                  @Html.ValidationMessageFor(model => model.CoverageType, "", new { @class = "text-danger" })Check Box To Indicate Full Coverage
                 </div>
               </div>
             </div>

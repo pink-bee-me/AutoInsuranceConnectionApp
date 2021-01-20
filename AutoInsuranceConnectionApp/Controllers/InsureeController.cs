@@ -59,6 +59,8 @@ namespace AutoInsuranceConnectionApp.Controllers
             return View();
         }
 
+        
+
         // GET: Insuree/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -125,7 +127,7 @@ namespace AutoInsuranceConnectionApp.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult InsureeDataToQuoteCalculator(int id)
+        public ActionResult InsureeDataToQuoteCalculator(Insuree id)
         {
             if (id == null)
             {
@@ -136,7 +138,7 @@ namespace AutoInsuranceConnectionApp.Controllers
             {
                 return HttpNotFound();
             }
-            return View("QuoteCalculator", "Quote");
+            return View("Admin", "Admin");
         }
     }
 }

@@ -134,6 +134,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Quote1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quote.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\InsureeVM.cs" />
     <Compile Include="Models\InsuranceEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,7 +156,7 @@
       <DependentUpon>InsuranceEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Insuree.cs">
-      <DependentUpon>Quote.tt</DependentUpon>
+      <DependentUpon>InsuranceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Quote.Context.cs">
       <AutoGen>True</AutoGen>
@@ -164,11 +170,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Quote.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Quote1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Quote.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -200,6 +201,7 @@
       <DependentUpon>InsuranceEntities.edmx</DependentUpon>
       <LastGenOutput>InsuranceEntities.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\InsuranceEntities.edmx.sql" />
     <Content Include="Models\InsuranceEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>InsuranceEntities.edmx</DependentUpon>
@@ -210,6 +212,7 @@
       <DependentUpon>Quote.edmx</DependentUpon>
       <LastGenOutput>Quote.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Quote.edmx.sql" />
     <Content Include="Models\Quote.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Quote.edmx</DependentUpon>
@@ -253,8 +256,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Insuree\Create.cshtml" />
     <Content Include="Views\Insuree\Delete.cshtml" />

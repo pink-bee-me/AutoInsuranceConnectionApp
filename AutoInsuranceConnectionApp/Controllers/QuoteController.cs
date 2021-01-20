@@ -1,30 +1,49 @@
-﻿using AutoInsuranceConnectionApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace AutoInsuranceConnectionApp.Controllers
 {
     public class QuoteController : Controller
     {
-        private InsuranceEntitiesQuotes db = new InsuranceEntitiesQuotes();  
 
-        // GET: Quote
-        public ActionResult GetInsureeData(int id)
+        // GET: Insuree for Quote
+        public ActionResult Index()
         {
-            var data = db.Insurees
-            return View(data);
+            return View();
+            //            using (InsuranceEntitiesQuotes db = new
+
+
+            //            var quote = new Quote();
+
+            //            quote.CalculateAge(Insuree DateOfBirth);
+            //        }
+
+
+            //        int InsureeId = Insuree.Id;
+            //        double BaseRate = 50.00;
+            //        double AgeUnder18 =
+            //decimal Age19to25
+            //        decimal Age26AndUp
+            //        decimal AutoYearPrior2000;
+            //        decimal AutoYearAfter2015
+            //       decimal IsPorsche
+            //       decimal IsCarerra911
+            //       decimal SpeedingTicket
+            //       decimal SubTotalBeforeDUICalc
+            //       decimal DUIRateUP25Percent
+            //       decimal SubTotalAfterDUICalc
+            //       decimal FullCovRateUP50Percent
+            //       decimal SubTotalAfterFullCovCalc
+            //       decimal QuoteInsCostPerMonth
+            //       decimal QuoteInsCostPerYear
+
+
+
+
+
+            //    }
+            //            return View("Admin","Admin");
+
         }
-
-
-      public ActionResult QuoteCalculator(Insuree Insuree)
-        {
-            var quote = new Quote();
-
-
-       }
 
     }
 }
