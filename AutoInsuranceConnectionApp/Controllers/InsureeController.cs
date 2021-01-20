@@ -51,8 +51,8 @@ namespace AutoInsuranceConnectionApp.Controllers
                 {
                     db.Insurees.Add(insuree);
                     db.SaveChanges();
-                    int id = insuree.Id;
-                    return RedirectToAction("CalculateQuote", "Quote");
+                 
+                  
 
                 }
 

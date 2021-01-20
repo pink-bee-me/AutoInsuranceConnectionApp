@@ -6,15 +6,21 @@ using System.Web.Mvc;
 namespace AutoInsuranceConnectionApp.Controllers
 {
 
-    private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LaurieSue\source\repos\AutoInsuranceConnectionApp\AutoInsuranceConnectionApp\App_Data\Insurance.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework"
-
 
     public class HomeController : Controller
     {
+        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LaurieSue\source\repos\AutoInsuranceConnectionApp\AutoInsuranceConnectionApp\App_Data\Insurance.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework";
+
+        public string ConnectionString => connectionString;
+
+
+
         public ActionResult Index()
         {
             return View();
         }
+
+
 
         public ActionResult Admin()
         {
