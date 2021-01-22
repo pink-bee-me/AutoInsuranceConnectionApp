@@ -25,7 +25,7 @@ namespace AutoInsuranceConnectionApp.Models
         public decimal AgeUnder18 { get; set; }
         public decimal Age19to25 { get; set; }
         public decimal Age26AndUp { get; set; }
-        public decimal AutoYearPrior2000 { get; set; }
+        public decimal AutoYearBefore2000 { get; set; }
         public decimal AutoYearAfter2015 { get; set; }
         public decimal IsPorsche { get; set; }
         public decimal IsCarerra911 { get; set; }

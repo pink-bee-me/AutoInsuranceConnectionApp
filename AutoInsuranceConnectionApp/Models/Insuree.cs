@@ -23,11 +23,10 @@ namespace AutoInsuranceConnectionApp.Models
         public string CarMake { get; set; }
         public string CarModel { get; set; }
         public int SpeedingTickets { get; set; }
+        public bool DUI { get; set; }
         public bool CoverageType { get; set; }
-        public decimal QuoteMonthly { get; set; }
-        public decimal QuoteYearly { get; set; }
         public int QuoteID { get; set; }
     
-        public virtual AutoQuote AutoQuote { get; set; }
+        public virtual AutoQuote AutoQuotes { get; set; }
     }
 }

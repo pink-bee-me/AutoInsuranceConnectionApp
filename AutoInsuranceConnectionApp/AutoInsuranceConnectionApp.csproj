@@ -151,9 +151,11 @@
     <Compile Include="Models\AutoQuote.cs">
       <DependentUpon>AutoInsuranceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\BusinessLogic.cs" />
     <Compile Include="Models\Insuree.cs">
       <DependentUpon>AutoInsuranceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AutoQuoteVM.cs" />
     <Compile Include="ViewModels\InsureeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -186,6 +188,7 @@
       <DependentUpon>AutoInsuranceEntities.edmx</DependentUpon>
       <LastGenOutput>AutoInsuranceEntities.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\AutoInsuranceEntities.edmx.sql" />
     <Content Include="Models\AutoInsuranceEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AutoInsuranceEntities.edmx</DependentUpon>
@@ -330,6 +333,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\EnterInsuree.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

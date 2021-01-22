@@ -8,7 +8,7 @@ namespace AutoInsuranceConnectionApp.Controllers
 {
     public class InsureeController : Controller
     {
-        private InsuranceEntitiesQuotes db = new InsuranceEntitiesQuotes();
+        private AutoInsuranceEntities db = new AutoInsuranceEntities();
 
         // GET: Insuree
         public ActionResult Index()
@@ -17,13 +17,13 @@ namespace AutoInsuranceConnectionApp.Controllers
         }
 
         // GET: Insuree/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? InsureeID)
         {
-            if (id == null)
+            if (InsureeID == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Insuree insuree = db.Insurees.Find(id);
+            Insuree insuree = db.Insurees.Find(InsureeID);
             if (insuree == null)
             {
                 return HttpNotFound();
@@ -42,24 +42,24 @@ namespace AutoInsuranceConnectionApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,Quote")] Insuree insuree)
+        public ActionResult Create([Bind(Include = "InsureeID,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,QuoteMonthly,QuoteYearly, QuoteID")] Insuree insuree)
         {
-            using (InsuranceEntitiesQuotes Insuree = new InsuranceEntitiesQuotes())
+            using (AutoInsuranceEntities Insuree = new AutoInsuranceEntities())
 
 
                 if (ModelState.IsValid)
                 {
                     db.Insurees.Add(insuree);
                     db.SaveChanges();
-                 
-                  
+
+
 
                 }
 
             return View();
         }
 
-        
+
 
         // GET: Insuree/Edit/5
         public ActionResult Edit(int? id)

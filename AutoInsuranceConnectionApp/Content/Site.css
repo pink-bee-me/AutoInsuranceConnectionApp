@@ -28,7 +28,11 @@ textarea {
     max-width: 280px;
 }
 
-/*Home/Index styles*/
+
+
+                /*!!!!!!! LANDING PAGE !!!!!!!*/
+/******* " ARE YOU PAYING TOO MUCH FOR YOUR INSURANCE ? "  ******/
+                        /*Home/Index styles*/
 
 #Home_Index_Background img {
     position: relative;
@@ -109,7 +113,14 @@ textarea {
     bottom: 100vh;
 }
 
-/*styling for Create Page of insuree controller*/
+
+
+
+                          /******** Insuree/Create  ***********/
+                 /*!!!!!!! CityStreetsCellPhone: ENTER INSUREE FORM !!!!!!!*/
+       /******* A.K.A Create Form With Button Get Quote / Button Back to Lis******/
+                        /* InsureeControlle / Create.cshtml */
+                      
 #Create_CSHTML_Image {
     position: relative;
     background-image: url("Images/widesmartRoad.jpg");

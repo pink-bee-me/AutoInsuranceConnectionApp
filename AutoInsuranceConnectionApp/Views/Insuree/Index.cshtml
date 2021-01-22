@@ -1,4 +1,13 @@
-﻿@model IEnumerable<AutoInsuranceConnectionApp.Models.InsuranceEntitiesQuotes>
+﻿@model AutoInsuranceConnectionApp.Models.AutoInsuranceEntities
+@model AutoInsuranceConnectionApp.Models.Insuree  
+@using { 
+
+public IEnumerable<AutoInsuranceEntities> GetAllModels()
+  {
+    return  Models;
+  }
+
+}
 
 @{
     ViewBag.Title = "Index";
@@ -9,6 +18,8 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+
 <table class="table">
     <tr>
         <th>
@@ -42,9 +53,11 @@
             @Html.DisplayNameFor(model => model.CoverageType)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quote)
+            @Html.DisplayNameFor(model => model.QuoteMonthly)
         </th>
-        <th></th>
+        <th>
+          @Html.DisplayNameFor(model => model.QuoteYearly)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
