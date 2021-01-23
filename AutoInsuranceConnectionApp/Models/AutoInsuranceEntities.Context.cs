@@ -13,9 +13,9 @@ namespace AutoInsuranceConnectionApp.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AutoInsuranceEntities : DbContext
+    public partial class Insuree : DbContext
     {
-        public AutoInsuranceEntities()
+        public Insuree()
             : base("name=AutoInsuranceEntities")
         {
         }

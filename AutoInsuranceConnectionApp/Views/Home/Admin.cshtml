@@ -1,0 +1,45 @@
+﻿@using AutoInsuranceConnectionApp.Models
+@model List<Insuree>
+
+@
+
+<h2>Admin Permissions => Access Granted</h2>
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+      <div class="card-header text-center">
+        <h5 class="m-0">Insurees</h5>
+      </div>   
+      <div class="card-body">
+        @foreach (var insuree in Model)
+        {
+          <div class="row">
+
+
+
+            <div class="col">
+              @insuree.QuoteID
+            </div>
+            <div class="col">
+              @insuree.InsureeID
+            </div>
+            <div class="col">
+              @insuree.FirstName
+            </div>
+            <div class="col">
+              @insuree.LastName
+            </div>
+            <div class="col">
+              @insuree.EmailAddress
+            </div>
+            <div class="col">
+              @insuree.QuoteMonthly
+            </div>
+            <div class="col">
+              @insuree.QuoteYearly
+            </div>
+
+          </div>
+        }
+
+      </div>
+</div>

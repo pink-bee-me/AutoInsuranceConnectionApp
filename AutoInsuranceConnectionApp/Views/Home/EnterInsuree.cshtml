@@ -1,1 +1,125 @@
-﻿
+﻿@using AutoInsuranceEntities.Models;
+@using System.Web.Mvc;
+
+<div id="Create_CSHTML_Image">
+
+  <div id="Create_Cshtml_Color_Overlay">
+
+    <div id="Create_Body" class="jumbotron">
+
+      @using Html.BeginForm()
+      {
+        @HTML.AntiForgeryToken()
+
+
+
+        <div class="form-horizontal m-4">
+          <h4>Create Insuree</h4>
+
+          <h5>Enter Insuree Data: </h5>
+
+
+          <hr />
+          @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+          <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-sm-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.EmailAddress, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } }) (Date Format: YYYY,MM,DD)
+
+              @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.CarYear, htmlAttributes: new { @class = "control-label col-sm-2 font-weight-bold" })
+            <div class="col-sm-10">
+              @Html.EditorFor(model => model.CarYear, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.CarYear, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.CarMake, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.CarMake, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.CarMake, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.CarModel, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.CarModel, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.CarModel, "", new { @class = "text-danger" })
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.DUI, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              <div class="checkbox">
+                @Html.EditorFor(model => model.DUI)
+                @Html.ValidationMessageFor(model => model.DUI, "", new { @class = "text-danger" })
+                Check Box To Indicate DUI On Driving Record
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.SpeedingTickets, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              @Html.EditorFor(model => model.SpeedingTickets, new { htmlAttributes = new { @class = "form-control" } })
+              @Html.ValidationMessageFor(model => model.SpeedingTickets, "", new { @class = "text-danger" }) Enter Number (Include ALL Speeding Tickets)
+            </div>
+          </div>
+
+          <div class="form-group">
+            @Html.LabelFor(model => model.CoverageType, htmlAttributes: new { @class = "control-label col-md-2 font-weight-bold" })
+            <div class="col-md-10">
+              <div class="checkbox">
+                @Html.EditorFor(model => model.CoverageType)
+                @Html.ValidationMessageFor(model => model.CoverageType, "", new { @class = "text-danger" })Check Box To Indicate Full Coverage
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-offset-2 col-md-10 m-2">
+            @Html.ActionLink("Back To Insurees List", "Index", "Insuree", null, new { @class = "btn btn-secondary" })
+
+            <input type="submit" value="Calculate Quote" class="btn btn-primary" />
+          </div>
+        </div>
+
+      }
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")

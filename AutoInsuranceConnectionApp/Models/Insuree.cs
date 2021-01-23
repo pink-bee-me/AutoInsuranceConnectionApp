@@ -10,9 +10,10 @@
 namespace AutoInsuranceConnectionApp.Models
 {
     using System;
-    using System.Collections.Generic;
-    
-    public partial class Insuree
+    using System.Collections;
+
+
+    public partial class Insuree : System.Collections.IEnumerable
     {
         public int InsureeID { get; set; }
         public string FirstName { get; set; }
@@ -26,7 +27,30 @@ namespace AutoInsuranceConnectionApp.Models
         public bool DUI { get; set; }
         public bool CoverageType { get; set; }
         public int QuoteID { get; set; }
-    
-        public virtual AutoQuote AutoQuotes { get; set; }
+        public decimal QuoteMonthly { get; set; }
+        public decimal QuoteYearly { get; set; }
+
+
+
+        public Insuree(string firstName, string lastName, string emailAddress, DateTime dateOfBirth,
+                       int carYear, string carMake, string carModel, int speedingTickets, bool dui,
+                       bool coverageType)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            EmailAddress = emailAddress;
+            DateOfBirth = dateOfBirth;
+            CarYear = carYear;
+            CarMake = carMake;
+            CarModel = carModel;
+            SpeedingTickets = speedingTickets;
+            DUI = dui;
+            CoverageType = coverageType;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

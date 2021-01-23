@@ -1,4 +1,5 @@
-﻿
+﻿@using System.Web.MVC.;
+
 
 <div id="Home_Index_Background">
   <img src="~/Content/Images/FrontPage.jpg" alt="Driving Down The Road Photo" />
@@ -24,14 +25,15 @@
       &#64Auto Insurance Connection, your policy is precisely crafted based on three key factors:<br />
       Lifestyle, Budget, and Coverage Level Requirements. <br /><br />
       <span>The Result:</span>
-      <p>
+     
         A top-notch Auto Inurance Solution that is custom-made and tailor-fit just for you! <br /> Life is like a Road Trip... everyone's experience is unique and so are their insurance needs!<br />So, take a minute and do yourself a favor...<br /><br>
         No Hassles. No Gimmicks. No Pressure. No Surprises... and No Hidden Fees.<br />
         <span> Join US! and Let The Good Times Roll...</span>
         <br />
-  </p>
-        @Html.ActionLink("GET A FREE QUOTE NOW!", "Create", "Insuree", null, new { @id = "Free", @class = "btn btn-lg btn-info" })
-      
+      </p>
+      <div id="Free" class=" btn btn-lg btn-info">
+        @Html.ActionLink("GET A FREE QUOTE NOW!", "EnterInsuree", "Home", null, null);
+      </div>
     </div>
   </div>
 </div>

@@ -214,11 +214,11 @@ _pkginfo.txt
 !?*.[Cc]ache/
 
 # Others
-ClientBin/
+#ClientBin/
 ~$*
 *~
-*.dbmdl
-*.dbproj.schemaview
+#*.dbmdl
+#*.dbproj.schemaview
 *.jfm
 *.pfx
 *.publishsettings
@@ -246,16 +246,16 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
-*.ldf
-*.ndf
+#*.mdf
+#*.ldf
+#*.ndf
 
 # Business Intelligence projects
-*.rdl.data
-*.bim.layout
-*.bim_*.settings
-*.rptproj.rsuser
-*- Backup*.rdl
+#*.rdl.data
+#*.bim.layout
+#*.bim_*.settings
+#*.rptproj.rsuser
+#*- Backup*.rdl
 
 # Microsoft Fakes
 FakesAssemblies/
@@ -279,9 +279,9 @@ node_modules/
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
 **/*.DesktopClient/GeneratedArtifacts
-**/*.DesktopClient/ModelManifest.xml
-**/*.Server/GeneratedArtifacts
-**/*.Server/ModelManifest.xml
+#**/*.DesktopClient/ModelManifest.xml
+#**/*.Server/GeneratedArtifacts
+#**/*.Server/ModelManifest.xml
 _Pvt_Extensions
 
 # Paket dependency manager
@@ -325,7 +325,7 @@ OpenCover/
 ASALocalRun/
 
 # MSBuild Binary and Structured Log
-*.binlog
+#*.binlog
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
